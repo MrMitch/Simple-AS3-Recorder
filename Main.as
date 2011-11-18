@@ -50,7 +50,16 @@
 			title_format.color = 0xAC1300;
 			
 			rec_title.defaultTextFormat = title_format;
-			rec_title.text = 'e-Client Recorder';
+			
+			if(loaderInfo.parameters.title)
+			{
+				rec_title.text = loaderInfo.parameters.title;
+			}
+			else
+			{
+				rec_title.text = 'Simple AS3 Recorder';
+			}
+			
 			rec_title.width = stage.width;
 			rec_title.height = 25;
 			rec_title.y = 35;
